@@ -1,3 +1,6 @@
 [submodule "libs"]
 	path = libs
 	url = git@github.com:Hetsh/BashCommons.git
+[submodule "inflate"]
+	path = inflate
+	url = git@github.com:Hetsh/ue-zlib-inflate.git
