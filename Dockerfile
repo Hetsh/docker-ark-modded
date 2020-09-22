@@ -8,7 +8,7 @@ ARG CONTENT_DIR="$TMP_DIR/steamapps/workshop/content/$APP_ID"
 
 # Structures Plus
 ARG SP_ID=731604991
-ARG SP_VER="20 Jun @ 7:34pm"
+ARG SP_VER="10 Jun @ 7:34pm"
 RUN steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$SP_ID" +quit && \
     find "$CONTENT_DIR" -type f -name "*.z" -exec inflate/inflate.sh {} \&\& rm {} {}.uncompressed_size \; && \
     mv "$CONTENT_DIR/$SP_ID" "$MOD_DIR/$SP_ID" && \
