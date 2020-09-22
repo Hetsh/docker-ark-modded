@@ -20,14 +20,7 @@ assert_dependency "curl"
 update_image "hetsh/ark" "ARK" "true" "(\d+\.)+\d+-\d+"
 
 # Structures Plus
-UPDATE_ID="SP_UPDATE"
-UPDATE_REGEX="\d+ [a-zA-Z]+ @ \d+:\d+(am|pm)"
-CURRENT_SP_VERSION=$(cat Dockerfile | grep -P -o "(?<=$UPDATE_ID=)\"$UPDATE_REGEX\"")
-NEW_SP_VERSION=$(curl --silent --location "https://steamcommunity.com/sharedfiles/filedetails/changelog/731604991" | grep -P -o "(?<=Update: )$UPDATE_REGEX" | head -n 1)
-if [ "$CURRENT_SP_VERSION" != "$NEW_SP_VERSION" ]; then
-	prepare_update "$UPDATE_ID" "Structures Plus" "$CURRENT_SP_VERSION" "$NEW_SP_VERSION"
-	update_release "$NEW_SP_VERSION"
-fi
+update_mod "731604991" "Structures Plus" "SP_VER"
 
 if ! updates_available; then
 	#echo "No updates available."
