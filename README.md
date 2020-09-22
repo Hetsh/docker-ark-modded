@@ -3,6 +3,9 @@
 # ARK
 Simple to set up dedicated ARK server with a personal selection of mods.
 
+## Installed Mods
+* Structures Plus
+
 ## How-To
 Use exactly as the [parent project](https://github.com/Hetsh/docker-ark-modded).
 
