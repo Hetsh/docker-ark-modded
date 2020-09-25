@@ -1,4 +1,4 @@
-FROM hetsh/ark:313.35-1
+FROM hetsh/ark:313.37-1
 ADD inflate inflate
 
 ARG APP_ID=346110
