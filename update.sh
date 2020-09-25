@@ -17,7 +17,7 @@ assert_dependency "jq"
 assert_dependency "curl"
 
 # Debian Stable with ARK
-update_image "hetsh/ark" "ARK" "true" "(\d+\.)+\d+-\d+"
+update_image "hetsh/ark" "ARK" "true" "\d+-\d+"
 
 # Structures Plus
 update_mod "731604991" "Structures Plus" "SP_VER"
