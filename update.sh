@@ -19,8 +19,9 @@ assert_dependency "curl"
 # Debian Stable with ARK
 update_image "hetsh/ark" "ARK" "true" "\d+-\d+"
 
-# Structures Plus
+# Mods
 update_mod "731604991" "Structures Plus" "SP_VER"
+update_mod "558651608" "Bridge" "BRIDGE_VER"
 
 if ! updates_available; then
 	#echo "No updates available."
