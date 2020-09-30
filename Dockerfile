@@ -27,5 +27,27 @@ RUN SRC_DIR="$CONTENT_DIR/$BRIDGE_ID/WindowsNoEditor" && \
     rm -r "$TMP_DIR/steamapps" && \
     inflate/modgen.sh "$DEST_DIR" "Bridge"
 
-# Cleanup and activation
-RUN echo "ActiveMods=$SP_ID,$BRIDGE_ID" >> "ShooterGame/Config/DefaultGameUserSettings.ini"
+# Castles, Keeps and Forts: Remastered
+ARG CKFR_ID=1814953878
+ARG CKFR_VER="23 Mar, 2018 @ 1:50pm"
+RUN SRC_DIR="$CONTENT_DIR/$CKFR_ID/WindowsNoEditor" && \
+    DEST_DIR="$MOD_DIR/$CKFR_ID" && \
+    steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$CKFR_ID" +quit && \
+    find "$SRC_DIR" -type f -name "*.z" -exec inflate/inflate.sh {} \; -exec rm {} {}.uncompressed_size \; && \
+    mv "$SRC_DIR" "$DEST_DIR" && \
+    rm -r "$TMP_DIR/steamapps" && \
+    inflate/modgen.sh "$DEST_DIR" "Castles, Keeps, and Forts: Remastered"
+
+# Castles, Keeps and Forts: Science Fiction
+ARG CKFSF_ID=2121156303
+ARG CKFSF_VER="23 Mar, 2018 @ 1:50pm"
+RUN SRC_DIR="$CONTENT_DIR/$CKFSF_ID/WindowsNoEditor" && \
+    DEST_DIR="$MOD_DIR/$CKFSF_ID" && \
+    steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$CKFSF_ID" +quit && \
+    find "$SRC_DIR" -type f -name "*.z" -exec inflate/inflate.sh {} \; -exec rm {} {}.uncompressed_size \; && \
+    mv "$SRC_DIR" "$DEST_DIR" && \
+    rm -r "$TMP_DIR/steamapps" && \
+    inflate/modgen.sh "$DEST_DIR" "Castles, Keeps, and Forts: Science Fiction"
+
+# Activation
+RUN echo "ActiveMods=$SP_ID,$BRIDGE_ID,$CKFR_ID,$CKFSF_ID" >> "ShooterGame/Config/DefaultGameUserSettings.ini"
