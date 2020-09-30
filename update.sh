@@ -24,6 +24,7 @@ update_mod "731604991" "Structures Plus" "SP_VER"
 update_mod "558651608" "Bridges" "BRIDGE_VER"
 update_mod "1814953878" "Castles, Keeps and Forts: Remastered" "CKFR_VER"
 update_mod "2121156303" "Castles, Keeps and Forts: Science Fiction" "CKFSF_VER"
+update_mod "793605978" "Super Spyglass" "SSG_VER"
 
 if ! updates_available; then
 	#echo "No updates available."

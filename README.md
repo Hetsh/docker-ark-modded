@@ -6,6 +6,7 @@ Simple to set up dedicated ARK server with a personal selection of mods.
 * [Bridges](https://steamcommunity.com/sharedfiles/filedetails/?id=558651608) (Mod-ID: 558651608)
 * [Castles, Keeps and Forts: Remastered](https://steamcommunity.com/sharedfiles/filedetails/?id=1814953878) (Mod-ID: 1814953878)
 * [Castles, Keeps and Forts: Science Fiction](https://steamcommunity.com/sharedfiles/filedetails/?id=2121156303) (Mod-ID: 2121156303)
+* [Super Spyglass](https://steamcommunity.com/sharedfiles/filedetails/?id=793605978) (Mod-ID: 793605978)
 
 ## Usage
 Use exactly as the [vanilla ark image](https://hub.docker.com/r/hetsh/ark).

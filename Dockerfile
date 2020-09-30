@@ -49,5 +49,16 @@ RUN SRC_DIR="$CONTENT_DIR/$CKFSF_ID/WindowsNoEditor" && \
     rm -r "$TMP_DIR/steamapps" && \
     inflate/modgen.sh "$DEST_DIR" "Castles, Keeps, and Forts: Science Fiction"
 
+# Super Spyglass
+ARG SSG_ID=793605978
+ARG SSG_VER="24 Jan, 2018 @ 1:15pm"
+RUN SRC_DIR="$CONTENT_DIR/$SSG_ID/WindowsNoEditor" && \
+    DEST_DIR="$MOD_DIR/$SSG_ID" && \
+    steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$SSG_ID" +quit && \
+    find "$SRC_DIR" -type f -name "*.z" -exec inflate/inflate.sh {} \; -exec rm {} {}.uncompressed_size \; && \
+    mv "$SRC_DIR" "$DEST_DIR" && \
+    rm -r "$TMP_DIR/steamapps" && \
+    inflate/modgen.sh "$DEST_DIR" "Super Spyglass (Open Source)"
+
 # Activation
-RUN echo "ActiveMods=$SP_ID,$BRIDGE_ID,$CKFR_ID,$CKFSF_ID" >> "ShooterGame/Config/DefaultGameUserSettings.ini"
+RUN echo "ActiveMods=$SP_ID,$BRIDGE_ID,$CKFR_ID,$CKFSF_ID,$SSG_ID" >> "ShooterGame/Config/DefaultGameUserSettings.ini"
