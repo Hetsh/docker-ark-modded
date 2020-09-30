@@ -95,7 +95,7 @@ RUN SRC_DIR="$CONTENT_DIR/$ERPD_ID/WindowsNoEditor" && \
 
 # Rare Sightings
 ARG RS_ID=1300713111
-ARG RS_VER="26 Aug @ 11:45am"
+ARG RS_VER="17 Apr, 2019 @ 8:11pm"
 RUN SRC_DIR="$CONTENT_DIR/$RS_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$RS_ID" && \
     steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$RS_ID" +quit && \
