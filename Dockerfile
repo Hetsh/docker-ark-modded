@@ -29,7 +29,7 @@ RUN SRC_DIR="$CONTENT_DIR/$BRIDGE_ID/WindowsNoEditor" && \
 
 # Castles, Keeps and Forts: Remastered
 ARG CKFR_ID=1814953878
-ARG CKFR_VER="23 Mar, 2018 @ 1:50pm"
+ARG CKFR_VER="28 Feb @ 2:11pm"
 RUN SRC_DIR="$CONTENT_DIR/$CKFR_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$CKFR_ID" && \
     steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$CKFR_ID" +quit && \
@@ -40,7 +40,7 @@ RUN SRC_DIR="$CONTENT_DIR/$CKFR_ID/WindowsNoEditor" && \
 
 # Castles, Keeps and Forts: Science Fiction
 ARG CKFSF_ID=2121156303
-ARG CKFSF_VER="23 Mar, 2018 @ 1:50pm"
+ARG CKFSF_VER="8 Jun @ 7:52pm"
 RUN SRC_DIR="$CONTENT_DIR/$CKFSF_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$CKFSF_ID" && \
     steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$CKFSF_ID" +quit && \
