@@ -93,5 +93,16 @@ RUN SRC_DIR="$CONTENT_DIR/$ERPD_ID/WindowsNoEditor" && \
     rm -r "$TMP_DIR/steamapps" && \
     inflate/modgen.sh "$DEST_DIR" "eco's RP Decor"
 
+# Rare Sightings
+ARG RS_ID=1300713111
+ARG RS_VER="26 Aug @ 11:45am"
+RUN SRC_DIR="$CONTENT_DIR/$RS_ID/WindowsNoEditor" && \
+    DEST_DIR="$MOD_DIR/$RS_ID" && \
+    steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$RS_ID" +quit && \
+    find "$SRC_DIR" -type f -name "*.z" -exec inflate/inflate.sh {} \; -exec rm {} {}.uncompressed_size \; && \
+    mv "$SRC_DIR" "$DEST_DIR" && \
+    rm -r "$TMP_DIR/steamapps" && \
+    inflate/modgen.sh "$DEST_DIR" "Rare Sightings"
+
 # Activation
-RUN echo "ActiveMods=$SP_ID,$BRIDGE_ID,$CKFR_ID,$CKFSF_ID,$SSG_ID,$ET_ID,$EGD_ID,$ERPD_ID" >> "ShooterGame/Config/DefaultGameUserSettings.ini"
+RUN echo "ActiveMods=$SP_ID,$BRIDGE_ID,$CKFR_ID,$CKFSF_ID,$SSG_ID,$ET_ID,$EGD_ID,$ERPD_ID,$RS_ID" >> "ShooterGame/Config/DefaultGameUserSettings.ini"
