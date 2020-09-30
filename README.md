@@ -1,13 +1,12 @@
-**This Project is still work in progress.**
-
-# ARK
+# ARK-Modded
 Simple to set up dedicated ARK server with a personal selection of mods.
 
 ## Installed Mods
-* Structures Plus
+* Structures Plus (Mod-ID: 731604991)
+* Bridges (Mod-ID: 558651608)
 
-## How-To
-Use exactly as the [parent project](https://github.com/Hetsh/docker-ark-modded).
+## Usage
+Use exactly as the [vanilla ark image](https://github.com/Hetsh/docker-ark).
 
 ## Fork Me!
 This is an open project (visit [GitHub](https://github.com/Hetsh/docker-ark-modded)).
