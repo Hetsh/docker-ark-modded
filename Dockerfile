@@ -60,5 +60,38 @@ RUN SRC_DIR="$CONTENT_DIR/$SSG_ID/WindowsNoEditor" && \
     rm -r "$TMP_DIR/steamapps" && \
     inflate/modgen.sh "$DEST_DIR" "Super Spyglass (Open Source)"
 
+# eco's Trees
+ARG ET_ID=670764308
+ARG ET_VER="18 Aug @ 7:18am"
+RUN SRC_DIR="$CONTENT_DIR/$ET_ID/WindowsNoEditor" && \
+    DEST_DIR="$MOD_DIR/$ET_ID" && \
+    steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$ET_ID" +quit && \
+    find "$SRC_DIR" -type f -name "*.z" -exec inflate/inflate.sh {} \; -exec rm {} {}.uncompressed_size \; && \
+    mv "$SRC_DIR" "$DEST_DIR" && \
+    rm -r "$TMP_DIR/steamapps" && \
+    inflate/modgen.sh "$DEST_DIR" "eco Trees"
+
+# eco's Garden Decor
+ARG EGD_ID=880871931
+ARG EGD_VER="4 Sep @ 9:32am"
+RUN SRC_DIR="$CONTENT_DIR/$EGD_ID/WindowsNoEditor" && \
+    DEST_DIR="$MOD_DIR/$EGD_ID" && \
+    steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$EGD_ID" +quit && \
+    find "$SRC_DIR" -type f -name "*.z" -exec inflate/inflate.sh {} \; -exec rm {} {}.uncompressed_size \; && \
+    mv "$SRC_DIR" "$DEST_DIR" && \
+    rm -r "$TMP_DIR/steamapps" && \
+    inflate/modgen.sh "$DEST_DIR" "eco's Garden Decor"
+
+# eco's Role Play Decor
+ARG ERPD_ID=741203089
+ARG ERPD_VER="26 Aug @ 11:45am"
+RUN SRC_DIR="$CONTENT_DIR/$ERPD_ID/WindowsNoEditor" && \
+    DEST_DIR="$MOD_DIR/$ERPD_ID" && \
+    steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$ERPD_ID" +quit && \
+    find "$SRC_DIR" -type f -name "*.z" -exec inflate/inflate.sh {} \; -exec rm {} {}.uncompressed_size \; && \
+    mv "$SRC_DIR" "$DEST_DIR" && \
+    rm -r "$TMP_DIR/steamapps" && \
+    inflate/modgen.sh "$DEST_DIR" "eco's RP Decor"
+
 # Activation
-RUN echo "ActiveMods=$SP_ID,$BRIDGE_ID,$CKFR_ID,$CKFSF_ID,$SSG_ID" >> "ShooterGame/Config/DefaultGameUserSettings.ini"
+RUN echo "ActiveMods=$SP_ID,$BRIDGE_ID,$CKFR_ID,$CKFSF_ID,$SSG_ID,$ET_ID,$EGD_ID,$ERPD_ID" >> "ShooterGame/Config/DefaultGameUserSettings.ini"
