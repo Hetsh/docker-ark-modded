@@ -7,7 +7,7 @@ ARG MOD_DIR="ShooterGame/Content/Mods"
 
 # Structures Plus
 ARG SP_ID=731604991
-ARG SP_VER="10 Jun @ 7:34pm"
+ARG SP_VER="6 Oct @ 12:05pm"
 RUN SRC_DIR="$CONTENT_DIR/$SP_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$SP_ID" && \
     steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$SP_ID" +quit && \
