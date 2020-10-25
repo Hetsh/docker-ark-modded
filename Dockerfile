@@ -73,7 +73,7 @@ RUN SRC_DIR="$CONTENT_DIR/$ET_ID/WindowsNoEditor" && \
 
 # eco's Garden Decor
 ARG EGD_ID=880871931
-ARG EGD_VER="21 Oct @ 8:34am"
+ARG EGD_VER="25 Oct @ 8:50am"
 RUN SRC_DIR="$CONTENT_DIR/$EGD_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$EGD_ID" && \
     steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$EGD_ID" +quit && \
