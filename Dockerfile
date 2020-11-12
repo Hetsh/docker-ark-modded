@@ -1,4 +1,4 @@
-FROM hetsh/ark:7757072552313405724-1
+FROM hetsh/ark:336534096169729972-1
 ADD inflate inflate
 ARG APP_ID=346110
 ARG TMP_DIR="/tmp"
@@ -7,7 +7,7 @@ ARG MOD_DIR="ShooterGame/Content/Mods"
 
 # Structures Plus
 ARG SP_ID=731604991
-ARG SP_VER="18 Oct @ 11:59am"
+ARG SP_VER="11 Nov @ 4:32pm"
 RUN SRC_DIR="$CONTENT_DIR/$SP_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$SP_ID" && \
     steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$SP_ID" +quit && \
