@@ -1,5 +1,5 @@
 FROM hetsh/ark:336534096169729972-1
-ADD inflate inflate
+ADD --chown=ark:ark inflate inflate
 ARG APP_ID=346110
 ARG TMP_DIR="/tmp"
 ARG CONTENT_DIR="$TMP_DIR/steamapps/workshop/content/$APP_ID"
@@ -13,7 +13,7 @@ RUN SRC_DIR="$CONTENT_DIR/$SP_ID/WindowsNoEditor" && \
     steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$SP_ID" +quit && \
     find "$SRC_DIR" -type f -name "*.z" -exec inflate/inflate.sh {} \; -exec rm {} {}.uncompressed_size \; && \
     mv "$SRC_DIR" "$DEST_DIR" && \
-    rm -r "$TMP_DIR/steamapps" && \
+    rm -r /tmp/dumps "$TMP_DIR/steamapps" && \
     inflate/modgen.sh "$DEST_DIR" "Structures Plus (Open Source)"
 
 # Bridge
@@ -24,7 +24,7 @@ RUN SRC_DIR="$CONTENT_DIR/$BRIDGE_ID/WindowsNoEditor" && \
     steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$BRIDGE_ID" +quit && \
     find "$SRC_DIR" -type f -name "*.z" -exec inflate/inflate.sh {} \; -exec rm {} {}.uncompressed_size \; && \
     mv "$SRC_DIR" "$DEST_DIR" && \
-    rm -r "$TMP_DIR/steamapps" && \
+    rm -r /tmp/dumps "$TMP_DIR/steamapps" && \
     inflate/modgen.sh "$DEST_DIR" "Bridge"
 
 # Castles, Keeps and Forts: Remastered
@@ -35,7 +35,7 @@ RUN SRC_DIR="$CONTENT_DIR/$CKFR_ID/WindowsNoEditor" && \
     steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$CKFR_ID" +quit && \
     find "$SRC_DIR" -type f -name "*.z" -exec inflate/inflate.sh {} \; -exec rm {} {}.uncompressed_size \; && \
     mv "$SRC_DIR" "$DEST_DIR" && \
-    rm -r "$TMP_DIR/steamapps" && \
+    rm -r /tmp/dumps "$TMP_DIR/steamapps" && \
     inflate/modgen.sh "$DEST_DIR" "Castles, Keeps, and Forts: Remastered"
 
 # Castles, Keeps and Forts: Science Fiction
@@ -46,7 +46,7 @@ RUN SRC_DIR="$CONTENT_DIR/$CKFSF_ID/WindowsNoEditor" && \
     steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$CKFSF_ID" +quit && \
     find "$SRC_DIR" -type f -name "*.z" -exec inflate/inflate.sh {} \; -exec rm {} {}.uncompressed_size \; && \
     mv "$SRC_DIR" "$DEST_DIR" && \
-    rm -r "$TMP_DIR/steamapps" && \
+    rm -r /tmp/dumps "$TMP_DIR/steamapps" && \
     inflate/modgen.sh "$DEST_DIR" "Castles, Keeps, and Forts: Science Fiction"
 
 # Super Spyglass
@@ -57,7 +57,7 @@ RUN SRC_DIR="$CONTENT_DIR/$SSG_ID/WindowsNoEditor" && \
     steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$SSG_ID" +quit && \
     find "$SRC_DIR" -type f -name "*.z" -exec inflate/inflate.sh {} \; -exec rm {} {}.uncompressed_size \; && \
     mv "$SRC_DIR" "$DEST_DIR" && \
-    rm -r "$TMP_DIR/steamapps" && \
+    rm -r /tmp/dumps "$TMP_DIR/steamapps" && \
     inflate/modgen.sh "$DEST_DIR" "Super Spyglass (Open Source)"
 
 # eco's Trees
@@ -68,7 +68,7 @@ RUN SRC_DIR="$CONTENT_DIR/$ET_ID/WindowsNoEditor" && \
     steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$ET_ID" +quit && \
     find "$SRC_DIR" -type f -name "*.z" -exec inflate/inflate.sh {} \; -exec rm {} {}.uncompressed_size \; && \
     mv "$SRC_DIR" "$DEST_DIR" && \
-    rm -r "$TMP_DIR/steamapps" && \
+    rm -r /tmp/dumps "$TMP_DIR/steamapps" && \
     inflate/modgen.sh "$DEST_DIR" "eco Trees"
 
 # eco's Garden Decor
@@ -79,7 +79,7 @@ RUN SRC_DIR="$CONTENT_DIR/$EGD_ID/WindowsNoEditor" && \
     steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$EGD_ID" +quit && \
     find "$SRC_DIR" -type f -name "*.z" -exec inflate/inflate.sh {} \; -exec rm {} {}.uncompressed_size \; && \
     mv "$SRC_DIR" "$DEST_DIR" && \
-    rm -r "$TMP_DIR/steamapps" && \
+    rm -r /tmp/dumps "$TMP_DIR/steamapps" && \
     inflate/modgen.sh "$DEST_DIR" "eco's Garden Decor"
 
 # eco's Role Play Decor
@@ -90,7 +90,7 @@ RUN SRC_DIR="$CONTENT_DIR/$ERPD_ID/WindowsNoEditor" && \
     steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$ERPD_ID" +quit && \
     find "$SRC_DIR" -type f -name "*.z" -exec inflate/inflate.sh {} \; -exec rm {} {}.uncompressed_size \; && \
     mv "$SRC_DIR" "$DEST_DIR" && \
-    rm -r "$TMP_DIR/steamapps" && \
+    rm -r /tmp/dumps "$TMP_DIR/steamapps" && \
     inflate/modgen.sh "$DEST_DIR" "eco's RP Decor"
 
 # Rare Sightings
@@ -101,8 +101,9 @@ RUN SRC_DIR="$CONTENT_DIR/$RS_ID/WindowsNoEditor" && \
     steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$RS_ID" +quit && \
     find "$SRC_DIR" -type f -name "*.z" -exec inflate/inflate.sh {} \; -exec rm {} {}.uncompressed_size \; && \
     mv "$SRC_DIR" "$DEST_DIR" && \
-    rm -r "$TMP_DIR/steamapps" && \
+    rm -r /tmp/dumps "$TMP_DIR/steamapps" && \
     inflate/modgen.sh "$DEST_DIR" "Rare Sightings"
 
-# Activation
-RUN echo "ActiveMods=$SP_ID,$BRIDGE_ID,$CKFR_ID,$CKFSF_ID,$SSG_ID,$ET_ID,$EGD_ID,$ERPD_ID,$RS_ID" >> "ShooterGame/Config/DefaultGameUserSettings.ini"
+# Cleanup & Activation
+RUN rm -r inflate && \
+    echo "ActiveMods=$SP_ID,$BRIDGE_ID,$CKFR_ID,$CKFSF_ID,$SSG_ID,$ET_ID,$EGD_ID,$ERPD_ID,$RS_ID" >> "ShooterGame/Config/DefaultGameUserSettings.ini"
