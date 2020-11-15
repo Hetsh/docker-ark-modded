@@ -1,4 +1,4 @@
-FROM hetsh/ark:6732232359421988588-1
+FROM hetsh/ark:6732232359421988588-2
 ADD --chown=ark:ark inflate inflate
 ARG APP_ID=346110
 ARG TMP_DIR="/tmp"
