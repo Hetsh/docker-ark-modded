@@ -1,17 +1,17 @@
 FROM hetsh/ark:6732232359421988588-2
 ADD --chown=ark:ark inflate inflate
 ARG APP_ID=346110
-ARG TMP_DIR="/tmp"
-ARG CONTENT_DIR="$TMP_DIR/steamapps/workshop/content/$APP_ID"
+ARG DL_DIR="/tmp"
+ARG CONTENT_DIR="$DL_DIR/steamapps/workshop/content/$APP_ID"
 ARG MOD_DIR="ShooterGame/Content/Mods"
-ARG JUNK_DIRS="/tmp/dumps $TMP_DIR/steamapps"
+ARG JUNK_DIRS="/tmp/dumps $DL_DIR/steamapps"
 
 # Structures Plus
 ARG SP_ID=731604991
 ARG SP_VER="15 Nov @ 4:58pm"
 RUN SRC_DIR="$CONTENT_DIR/$SP_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$SP_ID" && \
-    steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$SP_ID" +quit && \
+    steamcmd.sh +login anonymous +force_install_dir "$DL_DIR" +workshop_download_item "$APP_ID" "$SP_ID" +quit && \
     find "$SRC_DIR" -type f -name "*.z" -exec inflate/inflate.sh {} \; -exec rm {} {}.uncompressed_size \; && \
     mv "$SRC_DIR" "$DEST_DIR" && \
     rm -r $JUNK_DIRS && \
@@ -22,7 +22,7 @@ ARG BRIDGE_ID=558651608
 ARG BRIDGE_VER="23 Mar, 2018 @ 1:50pm"
 RUN SRC_DIR="$CONTENT_DIR/$BRIDGE_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$BRIDGE_ID" && \
-    steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$BRIDGE_ID" +quit && \
+    steamcmd.sh +login anonymous +force_install_dir "$DL_DIR" +workshop_download_item "$APP_ID" "$BRIDGE_ID" +quit && \
     find "$SRC_DIR" -type f -name "*.z" -exec inflate/inflate.sh {} \; -exec rm {} {}.uncompressed_size \; && \
     mv "$SRC_DIR" "$DEST_DIR" && \
     rm -r $JUNK_DIRS && \
@@ -33,7 +33,7 @@ ARG CKFR_ID=1814953878
 ARG CKFR_VER="28 Feb @ 2:11pm"
 RUN SRC_DIR="$CONTENT_DIR/$CKFR_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$CKFR_ID" && \
-    steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$CKFR_ID" +quit && \
+    steamcmd.sh +login anonymous +force_install_dir "$DL_DIR" +workshop_download_item "$APP_ID" "$CKFR_ID" +quit && \
     find "$SRC_DIR" -type f -name "*.z" -exec inflate/inflate.sh {} \; -exec rm {} {}.uncompressed_size \; && \
     mv "$SRC_DIR" "$DEST_DIR" && \
     rm -r $JUNK_DIRS && \
@@ -44,7 +44,7 @@ ARG CKFSF_ID=2121156303
 ARG CKFSF_VER="8 Jun @ 7:52pm"
 RUN SRC_DIR="$CONTENT_DIR/$CKFSF_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$CKFSF_ID" && \
-    steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$CKFSF_ID" +quit && \
+    steamcmd.sh +login anonymous +force_install_dir "$DL_DIR" +workshop_download_item "$APP_ID" "$CKFSF_ID" +quit && \
     find "$SRC_DIR" -type f -name "*.z" -exec inflate/inflate.sh {} \; -exec rm {} {}.uncompressed_size \; && \
     mv "$SRC_DIR" "$DEST_DIR" && \
     rm -r $JUNK_DIRS && \
@@ -55,7 +55,7 @@ ARG SSG_ID=793605978
 ARG SSG_VER="24 Jan, 2018 @ 1:15pm"
 RUN SRC_DIR="$CONTENT_DIR/$SSG_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$SSG_ID" && \
-    steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$SSG_ID" +quit && \
+    steamcmd.sh +login anonymous +force_install_dir "$DL_DIR" +workshop_download_item "$APP_ID" "$SSG_ID" +quit && \
     find "$SRC_DIR" -type f -name "*.z" -exec inflate/inflate.sh {} \; -exec rm {} {}.uncompressed_size \; && \
     mv "$SRC_DIR" "$DEST_DIR" && \
     rm -r $JUNK_DIRS && \
@@ -66,7 +66,7 @@ ARG ET_ID=670764308
 ARG ET_VER="18 Aug @ 7:18am"
 RUN SRC_DIR="$CONTENT_DIR/$ET_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$ET_ID" && \
-    steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$ET_ID" +quit && \
+    steamcmd.sh +login anonymous +force_install_dir "$DL_DIR" +workshop_download_item "$APP_ID" "$ET_ID" +quit && \
     find "$SRC_DIR" -type f -name "*.z" -exec inflate/inflate.sh {} \; -exec rm {} {}.uncompressed_size \; && \
     mv "$SRC_DIR" "$DEST_DIR" && \
     rm -r $JUNK_DIRS && \
@@ -77,7 +77,7 @@ ARG EGD_ID=880871931
 ARG EGD_VER="25 Oct @ 8:50am"
 RUN SRC_DIR="$CONTENT_DIR/$EGD_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$EGD_ID" && \
-    steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$EGD_ID" +quit && \
+    steamcmd.sh +login anonymous +force_install_dir "$DL_DIR" +workshop_download_item "$APP_ID" "$EGD_ID" +quit && \
     find "$SRC_DIR" -type f -name "*.z" -exec inflate/inflate.sh {} \; -exec rm {} {}.uncompressed_size \; && \
     mv "$SRC_DIR" "$DEST_DIR" && \
     rm -r $JUNK_DIRS && \
@@ -88,7 +88,7 @@ ARG ERPD_ID=741203089
 ARG ERPD_VER="21 Oct @ 7:58am"
 RUN SRC_DIR="$CONTENT_DIR/$ERPD_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$ERPD_ID" && \
-    steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$ERPD_ID" +quit && \
+    steamcmd.sh +login anonymous +force_install_dir "$DL_DIR" +workshop_download_item "$APP_ID" "$ERPD_ID" +quit && \
     find "$SRC_DIR" -type f -name "*.z" -exec inflate/inflate.sh {} \; -exec rm {} {}.uncompressed_size \; && \
     mv "$SRC_DIR" "$DEST_DIR" && \
     rm -r $JUNK_DIRS && \
@@ -99,7 +99,7 @@ ARG RS_ID=1300713111
 ARG RS_VER="17 Apr, 2019 @ 8:11pm"
 RUN SRC_DIR="$CONTENT_DIR/$RS_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$RS_ID" && \
-    steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$RS_ID" +quit && \
+    steamcmd.sh +login anonymous +force_install_dir "$DL_DIR" +workshop_download_item "$APP_ID" "$RS_ID" +quit && \
     find "$SRC_DIR" -type f -name "*.z" -exec inflate/inflate.sh {} \; -exec rm {} {}.uncompressed_size \; && \
     mv "$SRC_DIR" "$DEST_DIR" && \
     rm -r $JUNK_DIRS && \
