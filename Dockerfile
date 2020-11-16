@@ -4,7 +4,7 @@ ARG APP_ID=346110
 ARG DL_DIR="/tmp"
 ARG CONTENT_DIR="$DL_DIR/steamapps/workshop/content/$APP_ID"
 ARG MOD_DIR="ShooterGame/Content/Mods"
-ARG JUNK_DIRS="/tmp/dumps $DL_DIR/steamapps"
+ARG JUNK_DIRS="/tmp/dumps $DL_DIR/steamapps /home/ark/.steam /home/ark/Steam"
 
 # Structures Plus
 ARG SP_ID=731604991
