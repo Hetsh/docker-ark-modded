@@ -8,7 +8,7 @@ ARG JUNK_DIRS="/tmp/dumps $TMP_DIR/steamapps"
 
 # Structures Plus
 ARG SP_ID=731604991
-ARG SP_VER="11 Nov @ 4:32pm"
+ARG SP_VER="15 Nov @ 4:58pm"
 RUN SRC_DIR="$CONTENT_DIR/$SP_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$SP_ID" && \
     steamcmd.sh +login anonymous +force_install_dir "$TMP_DIR" +workshop_download_item "$APP_ID" "$SP_ID" +quit && \
