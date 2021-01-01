@@ -8,7 +8,7 @@ ARG JUNK_DIRS="/tmp/dumps $DL_DIR/steamapps /home/ark/.steam /home/ark/Steam"
 
 # Structures Plus
 ARG SP_ID=731604991
-ARG SP_VER="13 Dec @ 7:10pm"
+ARG SP_VER="13 Dec, 2020 @ 7:10pm"
 RUN SRC_DIR="$CONTENT_DIR/$SP_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$SP_ID" && \
     steamcmd.sh +login anonymous +force_install_dir "$DL_DIR" +workshop_download_item "$APP_ID" "$SP_ID" +quit && \
@@ -30,7 +30,7 @@ RUN SRC_DIR="$CONTENT_DIR/$BRIDGE_ID/WindowsNoEditor" && \
 
 # Castles, Keeps and Forts: Remastered
 ARG CKFR_ID=1814953878
-ARG CKFR_VER="28 Feb @ 2:11pm"
+ARG CKFR_VER="28 Feb, 2020 @ 2:11pm"
 RUN SRC_DIR="$CONTENT_DIR/$CKFR_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$CKFR_ID" && \
     steamcmd.sh +login anonymous +force_install_dir "$DL_DIR" +workshop_download_item "$APP_ID" "$CKFR_ID" +quit && \
@@ -41,7 +41,7 @@ RUN SRC_DIR="$CONTENT_DIR/$CKFR_ID/WindowsNoEditor" && \
 
 # Castles, Keeps and Forts: Science Fiction
 ARG CKFSF_ID=2121156303
-ARG CKFSF_VER="8 Jun @ 7:52pm"
+ARG CKFSF_VER="8 Jun, 2020 @ 7:52pm"
 RUN SRC_DIR="$CONTENT_DIR/$CKFSF_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$CKFSF_ID" && \
     steamcmd.sh +login anonymous +force_install_dir "$DL_DIR" +workshop_download_item "$APP_ID" "$CKFSF_ID" +quit && \
@@ -63,7 +63,7 @@ RUN SRC_DIR="$CONTENT_DIR/$SSG_ID/WindowsNoEditor" && \
 
 # eco's Trees
 ARG ET_ID=670764308
-ARG ET_VER="18 Aug @ 7:18am"
+ARG ET_VER="18 Aug, 2020 @ 7:18am"
 RUN SRC_DIR="$CONTENT_DIR/$ET_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$ET_ID" && \
     steamcmd.sh +login anonymous +force_install_dir "$DL_DIR" +workshop_download_item "$APP_ID" "$ET_ID" +quit && \
@@ -74,7 +74,7 @@ RUN SRC_DIR="$CONTENT_DIR/$ET_ID/WindowsNoEditor" && \
 
 # eco's Garden Decor
 ARG EGD_ID=880871931
-ARG EGD_VER="25 Oct @ 8:50am"
+ARG EGD_VER="25 Oct, 2020 @ 8:50am"
 RUN SRC_DIR="$CONTENT_DIR/$EGD_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$EGD_ID" && \
     steamcmd.sh +login anonymous +force_install_dir "$DL_DIR" +workshop_download_item "$APP_ID" "$EGD_ID" +quit && \
@@ -85,7 +85,7 @@ RUN SRC_DIR="$CONTENT_DIR/$EGD_ID/WindowsNoEditor" && \
 
 # eco's Role Play Decor
 ARG ERPD_ID=741203089
-ARG ERPD_VER="21 Oct @ 7:58am"
+ARG ERPD_VER="21 Oct, 2020 @ 7:58am"
 RUN SRC_DIR="$CONTENT_DIR/$ERPD_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$ERPD_ID" && \
     steamcmd.sh +login anonymous +force_install_dir "$DL_DIR" +workshop_download_item "$APP_ID" "$ERPD_ID" +quit && \
