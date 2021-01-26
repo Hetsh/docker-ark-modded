@@ -41,7 +41,7 @@ RUN SRC_DIR="$CONTENT_DIR/$CKFR_ID/WindowsNoEditor" && \
 
 # Castles, Keeps and Forts: Science Fiction
 ARG CKFSF_ID=2121156303
-ARG CKFSF_VER="8 Jun, 2020 @ 7:52pm"
+ARG CKFSF_VER="26 Jan @ 12:03pm"
 RUN SRC_DIR="$CONTENT_DIR/$CKFSF_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$CKFSF_ID" && \
     steamcmd.sh +login anonymous +force_install_dir "$DL_DIR" +workshop_download_item "$APP_ID" "$CKFSF_ID" +quit && \
