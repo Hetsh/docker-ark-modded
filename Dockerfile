@@ -85,7 +85,7 @@ RUN SRC_DIR="$CONTENT_DIR/$EGD_ID/WindowsNoEditor" && \
 
 # eco's Role Play Decor
 ARG ERPD_ID=741203089
-ARG ERPD_VER="13 Jan @ 8:35am"
+ARG ERPD_VER="14 Apr @ 8:52am"
 RUN SRC_DIR="$CONTENT_DIR/$ERPD_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$ERPD_ID" && \
     steamcmd.sh +login anonymous +force_install_dir "$DL_DIR" +workshop_download_item "$APP_ID" "$ERPD_ID" +quit && \
