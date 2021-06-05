@@ -30,7 +30,7 @@ RUN SRC_DIR="$CONTENT_DIR/$BRIDGE_ID/WindowsNoEditor" && \
 
 # Castles, Keeps and Forts: Remastered
 ARG CKFR_ID=1814953878
-ARG CKFR_VER="28 Feb, 2020 @ 2:11pm"
+ARG CKFR_VER="4 Jun @ 7:26pm"
 RUN SRC_DIR="$CONTENT_DIR/$CKFR_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$CKFR_ID" && \
     steamcmd.sh +login anonymous +force_install_dir "$DL_DIR" +workshop_download_item "$APP_ID" "$CKFR_ID" +quit && \
