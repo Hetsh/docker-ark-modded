@@ -1,4 +1,4 @@
-FROM hetsh/ark:799753051936917170-1
+FROM hetsh/ark:4505657304230021673-1
 ADD --chown=ark:ark inflate inflate
 ARG APP_ID=346110
 ARG DL_DIR="/tmp"
@@ -8,7 +8,7 @@ ARG JUNK_DIRS="/tmp/dumps $DL_DIR/steamapps /home/ark/.steam /home/ark/Steam"
 
 # Structures Plus
 ARG SP_ID=731604991
-ARG SP_VER="18 May @ 2:56pm"
+ARG SP_VER="6 Jun @ 7:03pm"
 RUN SRC_DIR="$CONTENT_DIR/$SP_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$SP_ID" && \
     steamcmd.sh +login anonymous +force_install_dir "$DL_DIR" +workshop_download_item "$APP_ID" "$SP_ID" +quit && \
