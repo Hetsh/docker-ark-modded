@@ -83,7 +83,7 @@ RUN SRC_DIR="$CONTENT_DIR/$SSG_ID/WindowsNoEditor" && \
 
 # eco's Trees
 ARG ET_ID=670764308
-ARG ET_VER="18 Aug, 2020 @ 7:18am"
+ARG ET_VER="16 Jun @ 7:58am"
 RUN SRC_DIR="$CONTENT_DIR/$ET_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$ET_ID" && \
     steamcmd.sh \
@@ -113,7 +113,7 @@ RUN SRC_DIR="$CONTENT_DIR/$EGD_ID/WindowsNoEditor" && \
 
 # eco's Role Play Decor
 ARG ERPD_ID=741203089
-ARG ERPD_VER="14 Apr @ 8:52am"
+ARG ERPD_VER="16 Jun @ 7:42am"
 RUN SRC_DIR="$CONTENT_DIR/$ERPD_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$ERPD_ID" && \
     steamcmd.sh \
