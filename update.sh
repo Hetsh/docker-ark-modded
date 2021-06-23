@@ -20,7 +20,12 @@ assert_dependency "curl"
 update_image "hetsh/ark" "ARK" "true" "\d+-\d+"
 
 # Mods
-update_mod "970855993" "Olympus" "OLYMPUS_VER"
+update_mod "970855993" "Olympus" "MAP_VER"
+update_mod "731604991" "Structures Plus" "SP_VER"
+update_mod "1650069767" "Sleepable Beds" "SB_VER"
+update_mod "895711211" "Classic Flyers" "CF_VER"
+update_mod "1300713111" "Rare Sightings" "RS_VER"
+update_mod "1251632107" "Immersive Taming" "IT_VER"
 
 if ! updates_available; then
 	#echo "No updates available."
