@@ -83,7 +83,7 @@ RUN SRC_DIR="$CONTENT_DIR/$RS_ID/WindowsNoEditor" && \
 
 # Immersive Taming
 ARG IT_ID=1251632107
-ARG IT_VER="6 Jun @ 2:50pm"
+ARG IT_VER="18 Jul @ 1:09pm"
 RUN SRC_DIR="$CONTENT_DIR/$IT_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$IT_ID" && \
     steamcmd.sh \
