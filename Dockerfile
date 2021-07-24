@@ -1,5 +1,5 @@
 FROM hetsh/ark:1330822451030543697-1
-ADD --chown=ark:ark inflate inflate
+COPY --chown="ark":"ark" "inflate" "inflate"
 ARG APP_ID=346110
 ARG DL_DIR="/tmp"
 ARG CONTENT_DIR="$DL_DIR/steamapps/workshop/content/$APP_ID"
