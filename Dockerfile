@@ -23,7 +23,7 @@ RUN SRC_DIR="$CONTENT_DIR/$MAP_ID/WindowsNoEditor" && \
 
 # Structures Plus
 ARG SP_ID=731604991
-ARG SP_VER="17 Aug @ 5:05pm"
+ARG SP_VER="22 Aug @ 6:08pm"
 RUN SRC_DIR="$CONTENT_DIR/$SP_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$SP_ID" && \
     steamcmd.sh \
