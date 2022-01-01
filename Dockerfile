@@ -23,7 +23,7 @@ RUN SRC_DIR="$CONTENT_DIR/$MAP_ID/WindowsNoEditor" && \
 
 # Structures Plus
 ARG SP_ID=731604991
-ARG SP_VER="22 Aug @ 6:08pm"
+ARG SP_VER="22 Aug, 2021 @ 6:08pm"
 RUN SRC_DIR="$CONTENT_DIR/$SP_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$SP_ID" && \
     steamcmd.sh \
@@ -38,7 +38,7 @@ RUN SRC_DIR="$CONTENT_DIR/$SP_ID/WindowsNoEditor" && \
 
 # Sleepable Beds
 ARG SB_ID=1650069767
-ARG SB_VER="8 Mar @ 1:53am"
+ARG SB_VER="8 Mar, 2021 @ 1:53am"
 RUN SRC_DIR="$CONTENT_DIR/$SB_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$SB_ID" && \
     steamcmd.sh \
@@ -83,7 +83,7 @@ RUN SRC_DIR="$CONTENT_DIR/$RS_ID/WindowsNoEditor" && \
 
 # Immersive Taming
 ARG IT_ID=1251632107
-ARG IT_VER="18 Jul @ 1:09pm"
+ARG IT_VER="18 Jul, 2021 @ 1:09pm"
 RUN SRC_DIR="$CONTENT_DIR/$IT_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$IT_ID" && \
     steamcmd.sh \
