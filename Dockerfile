@@ -1,4 +1,4 @@
-FROM hetsh/ark:1067308730937747479-1
+FROM hetsh/ark:647629273515635259-1
 COPY --chown="ark":"ark" "inflate" "inflate"
 ARG APP_ID=346110
 ARG DL_DIR="/tmp"
