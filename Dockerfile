@@ -8,7 +8,7 @@ ARG JUNK_DIRS="/tmp/dumps $DL_DIR/steamapps /home/ark/.steam /home/ark/Steam"
 
 # Olympus Map
 ARG MAP_ID=970855993
-ARG MAP_VER="8 Apr @ 6:45pm"
+ARG MAP_VER="7 Jul @ 6:03pm"
 RUN SRC_DIR="$CONTENT_DIR/$MAP_ID/WindowsNoEditor" && \
     DEST_DIR="$MOD_DIR/$MAP_ID" && \
     steamcmd.sh \
